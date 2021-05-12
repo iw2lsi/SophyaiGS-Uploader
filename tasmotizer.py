@@ -23,7 +23,7 @@ import firmwareURL
 from gui import HLayout, VLayout, GroupBoxH, GroupBoxV, SpinBox, dark_palette
 from utils import MODULES, NoBinFile, NetworkError
 
-__version__ = '0.1'
+__version__ = '0.1.1'
 
 BINS_URL = 'http://ota.tasmota.com'
 
@@ -288,7 +288,7 @@ class ProcessDialog(QDialog):
     def __init__(self, port, **kwargs):
         super().__init__()
 
-        self.setWindowTitle('Cooking your TinyGS station...')
+        self.setWindowTitle('Cooking your SophyaiGS station...')
         self.setFixedWidth(400)
 
         self.exception = None
@@ -499,7 +499,7 @@ class Tasmotizer(QDialog):
 
         self.esp_thread = None
 
-        self.setWindowTitle(f'TinyGS Uploader {__version__}')
+        self.setWindowTitle(f'SophyaiGS Uploader {__version__}')
         self.setMinimumWidth(480)
 
         self.mode = 0  # BIN file
@@ -588,7 +588,7 @@ class Tasmotizer(QDialog):
         gbFW.addWidgets([self.wFile, self.cbHackboxBin, self.cbSelfReset, self.cbErase])
 
         # Buttons
-        self.pbTasmotize = QPushButton('Upload tinyGS firmware!')
+        self.pbTasmotize = QPushButton('Upload SophyaiGS firmware!')
         self.pbTasmotize.setFixedHeight(50)
         self.pbTasmotize.setStyleSheet('background-color: #223579;')
 
